@@ -3,15 +3,12 @@ const time = new Date().getHours();
 const getTimeOfDay = time => {
     let timeofday = ''
     if(time >= 4 && time < 12){
-        isMorning(time);
         timeofday = "Morning";
     }
     else if (time >=12 && time < 17){
-        isAfternoon();
         timeofday = "Afternoon";
     }
-    else if (time >= 17 && time < 4) {
-        isEvening();
+    else if (time >= 17 || time < 4) {
         timeofday = "Evening"
     }
     return timeofday;
